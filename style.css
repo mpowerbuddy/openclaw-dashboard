@@ -93,10 +93,21 @@ section h2 {
 .event-item {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .event-item:last-child {
   border-bottom: none;
+}
+
+.cal-badge {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  color: #666;
 }
 
 .empty-state {

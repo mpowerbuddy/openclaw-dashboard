@@ -2,7 +2,7 @@
   "date": "Tuesday, February 3, 2026",
   "weather": {
     "icon": "☀️",
-    "temp": "27°F"
+    "temp": "25°F"
   },
   "walk": {
     "suggested": true,
@@ -12,12 +12,29 @@
   },
   "calendar": [
     {
-      "time": "9 AM",
-      "title": "Work day"
+      "time": "02:00PM",
+      "title": "Pre-production stories sync",
+      "calendar": "Work"
     },
     {
-      "time": "5 PM",
-      "title": "Dad duty starts"
+      "time": "04:00AM",
+      "title": "🎨 Design Phoenix Disneyland Shirt",
+      "calendar": "Personal"
+    },
+    {
+      "time": "04:00PM",
+      "title": "CCS Story Refinement: POS Completes Configurator",
+      "calendar": "Work"
+    },
+    {
+      "time": "11:00AM",
+      "title": "Code Reviews",
+      "calendar": "Work"
+    },
+    {
+      "time": "12:00PM",
+      "title": "SLTWTR Stand Up",
+      "calendar": "Work"
     }
   ],
   "brainDump": [
@@ -58,5 +75,5 @@
     }
   ],
   "projects": [],
-  "updated": "2026-02-03T11:18:43.772Z"
+  "updated": "2026-02-03T12:35:25.636Z"
 }

@@ -25,7 +25,7 @@ async function loadDashboard() {
       calendarDiv.innerHTML = '<div class="empty-state">No events scheduled</div>';
     } else {
       calendarDiv.innerHTML = data.calendar.map(e =>
-        `<div class="event-item">${e.time} — ${e.title}</div>`
+        `<div class="event-item">${e.time} — ${e.title} <span class="cal-badge">${e.calendar || ''}</span></div>`
       ).join('');
     }
 
