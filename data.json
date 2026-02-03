@@ -1,0 +1,62 @@
+{
+  "date": "Tuesday, February 3, 2026",
+  "weather": {
+    "icon": "☀️",
+    "temp": "27°F"
+  },
+  "walk": {
+    "suggested": true,
+    "bestTime": "12-1 PM (warmest part of day)",
+    "reason": "Cold morning, warmer by noon",
+    "note": "Bundle up"
+  },
+  "calendar": [
+    {
+      "time": "9 AM",
+      "title": "Work day"
+    },
+    {
+      "time": "5 PM",
+      "title": "Dad duty starts"
+    }
+  ],
+  "brainDump": [
+    {
+      "text": "Get an oil change",
+      "priority": "week",
+      "deadline": null
+    },
+    {
+      "text": "Mail off Phoenix's 2 paper work items — DUE END OF WEEK",
+      "priority": "soon",
+      "deadline": "Due: END OF WEEK (02/02/2026, 19:19:00"
+    },
+    {
+      "text": "Clean the garage",
+      "priority": "soon",
+      "deadline": null
+    },
+    {
+      "text": "Archive 2025 mood board (photo desk moodboard, write up each item)",
+      "priority": "soon",
+      "deadline": null
+    },
+    {
+      "text": "2026 moodboard",
+      "priority": "soon",
+      "deadline": null
+    },
+    {
+      "text": "Design Phoenix Disneyland shirt (concept phase, then screen print) — DUE: Design by Feb 28, print by Mar 1",
+      "priority": "soon",
+      "deadline": "Due: Design by Feb 28, print by Mar 1 (02/02/2026, 19:19:00"
+    },
+    {
+      "text": "Design Farrah Valentine's card + write note inside",
+      "priority": "urgent",
+      "deadline": null
+    }
+  ],
+  "projects": [],
+  "updated": "2026-02-03T11:18:43.772Z"
+}
