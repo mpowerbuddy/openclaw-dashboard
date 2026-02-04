@@ -1,79 +1,67 @@
 {
-  "date": "Tuesday, February 3, 2026",
+  "date": "Wednesday, February 4, 2026",
   "weather": {
     "icon": "☀️",
-    "temp": "25°F"
+    "temp": "N/A"
   },
   "walk": {
     "suggested": true,
-    "bestTime": "12-1 PM (warmest part of day)",
-    "reason": "Cold morning, warmer by noon",
-    "note": "Bundle up"
+    "bestTime": "12-1 PM",
+    "reason": "Fits before dad duty",
+    "note": null
   },
-  "calendar": [
-    {
-      "time": "02:00PM",
-      "title": "Pre-production stories sync",
-      "calendar": "Work"
-    },
-    {
-      "time": "04:00AM",
-      "title": "🎨 Design Phoenix Disneyland Shirt",
-      "calendar": "Personal"
-    },
-    {
-      "time": "04:00PM",
-      "title": "CCS Story Refinement: POS Completes Configurator",
-      "calendar": "Work"
-    },
-    {
-      "time": "11:00AM",
-      "title": "Code Reviews",
-      "calendar": "Work"
-    },
-    {
-      "time": "12:00PM",
-      "title": "SLTWTR Stand Up",
-      "calendar": "Work"
-    }
-  ],
   "brainDump": [
     {
       "text": "Get an oil change",
-      "priority": "week",
+      "priority": "normal",
       "deadline": null
     },
     {
       "text": "Mail off Phoenix's 2 paper work items — DUE END OF WEEK",
-      "priority": "soon",
+      "priority": "high",
       "deadline": "Due: END OF WEEK (02/02/2026, 19:19:00"
     },
     {
       "text": "Clean the garage",
-      "priority": "soon",
+      "priority": "normal",
       "deadline": null
     },
     {
       "text": "Archive 2025 mood board (photo desk moodboard, write up each item)",
-      "priority": "soon",
+      "priority": "normal",
       "deadline": null
     },
     {
       "text": "2026 moodboard",
-      "priority": "soon",
+      "priority": "normal",
       "deadline": null
     },
     {
       "text": "Design Phoenix Disneyland shirt (concept phase, then screen print) — DUE: Design by Feb 28, print by Mar 1",
-      "priority": "soon",
+      "priority": "high",
       "deadline": "Due: Design by Feb 28, print by Mar 1 (02/02/2026, 19:19:00"
     },
     {
       "text": "Design Farrah Valentine's card + write note inside",
       "priority": "urgent",
       "deadline": null
+    },
+    {
+      "text": "Research BigShot to Instax Wide conversion — youtube.com/watch?v=mRqUQ4y2cug (Someday project)",
+      "priority": "low",
+      "deadline": null
+    },
+    {
+      "text": "Billabong CSS Update",
+      "priority": "normal",
+      "deadline": null
+    },
+    {
+      "text": "Arch Deployment profiles (would take an hour but outside my responsibilities)",
+      "priority": "normal",
+      "deadline": null
     }
   ],
   "projects": [],
-  "updated": "2026-02-03T12:35:25.636Z"
+  "updated": "2026-02-04T13:31:56.281Z"
 }
