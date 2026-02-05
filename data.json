@@ -1,7 +1,7 @@
 {
   "date": "Wednesday, February 4, 2026",
   "weather": {
-    "icon": "☀️",
+    "icon": "☁️",
     "temp": "50°F"
   },
   "walk": {
@@ -12,56 +12,168 @@
   },
   "brainDump": [
     {
-      "text": "Get an oil change",
-      "priority": "normal",
-      "deadline": null
-    },
-    {
-      "text": "Mail off Phoenix's 2 paper work items — DUE END OF WEEK",
-      "priority": "high",
-      "deadline": "Due: END OF WEEK (02/02/2026, 19:19:00"
-    },
-    {
-      "text": "Clean the garage",
-      "priority": "normal",
-      "deadline": null
-    },
-    {
-      "text": "Archive 2025 mood board (photo desk moodboard, write up each item)",
-      "priority": "normal",
-      "deadline": null
-    },
-    {
-      "text": "2026 moodboard",
-      "priority": "normal",
-      "deadline": null
-    },
-    {
-      "text": "Design Phoenix Disneyland shirt (concept phase, then screen print) — DUE: Design by Feb 28, print by Mar 1",
-      "priority": "high",
-      "deadline": "Due: Design by Feb 28, print by Mar 1 (02/02/2026, 19:19:00"
-    },
-    {
-      "text": "Design Farrah Valentine's card + write note inside",
+      "text": "Update hotspot with on click functionality",
       "priority": "urgent",
-      "deadline": null
-    },
-    {
-      "text": "Research BigShot to Instax Wide conversion — youtube.com/watch?v=mRqUQ4y2cug (Someday project)",
-      "priority": "low",
-      "deadline": null
+      "deadline": "Due: end of week",
+      "category": "work"
     },
     {
       "text": "Billabong CSS Update",
-      "priority": "normal",
-      "deadline": null
+      "priority": "soon",
+      "deadline": null,
+      "category": "work"
     },
     {
-      "text": "Arch Deployment profiles (would take an hour but outside my responsibilities)",
+      "text": "Update card offers component",
+      "priority": "soon",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Arch Deployment profiles",
       "priority": "normal",
-      "deadline": null
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Investigate Mintlify for Docs",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Add Scroll animation component to component library",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Update deployment onboarding doc",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Add Searchscpring Integration to component Library",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Update Neptune 3 Starter Templates",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Move Neptune framework into the theme",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Report findings on Strict Liquid enforcement",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Create a VWO AB test guide for the customer segmentation controller",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Send LifeVantage theme preview link",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Add branch model to the Lifevantage readme",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Create a theme doc explaining the symlinking of liquid files",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Write a theme block creation tutorial doc",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Breakdown current responsibilities 3-5",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Create Dev onboarding docs from Lucas call transcript",
+      "priority": "normal",
+      "deadline": null,
+      "category": "work"
+    },
+    {
+      "text": "Research BigShot to Instax Wide conversion",
+      "priority": "someday",
+      "deadline": null,
+      "category": "hobby"
+    },
+    {
+      "text": "Design Phoenix Disneyland shirt",
+      "priority": "soon",
+      "deadline": "Due: 2026-02-28",
+      "category": "hobby"
+    },
+    {
+      "text": "Design Farrah Valentine's card + write note inside",
+      "priority": "soon",
+      "deadline": "Due: 2026-02-14",
+      "category": "hobby"
+    },
+    {
+      "text": "Archive 2025 mood board",
+      "priority": "someday",
+      "deadline": null,
+      "category": "hobby"
+    },
+    {
+      "text": "Create 2026 moodboard",
+      "priority": "someday",
+      "deadline": null,
+      "category": "hobby"
+    },
+    {
+      "text": "Mail off Phoenix's 2 paper work items",
+      "priority": "urgent",
+      "deadline": "Due: end of week",
+      "category": "home"
+    },
+    {
+      "text": "Get an oil change",
+      "priority": "soon",
+      "deadline": null,
+      "category": "home"
+    },
+    {
+      "text": "Clean the garage",
+      "priority": "soon",
+      "deadline": null,
+      "category": "home"
     }
   ],
+  "brainDumpCounts": {
+    "work": 18,
+    "hobby": 5,
+    "home": 3,
+    "inbox": 0
+  },
   "projects": [],
-  "updated": "2026-02-04T14:34:16.845Z"
+  "updated": "2026-02-05T00:31:57.265Z"
 }
