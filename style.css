@@ -122,4 +122,44 @@ section h2 {
   border-radius: 8px;
   font-size: 0.9rem;
 }
+
+/* Priority groups */
+.priority-group {
+  margin-bottom: 16px;
+}
+
+.priority-group h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.priority-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Status update section */
+.status-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+.status-section h3 {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.status-section p {
+  margin-bottom: 4px;
+}
+
+.status-section small {
+  display: block;
+  margin-top: 8px;
+  color: #888;
+}
 /* Cache refresh 1770215590 */

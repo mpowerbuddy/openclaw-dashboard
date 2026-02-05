@@ -1,29 +1,25 @@
 async function loadDashboard() {
   try {
-    // Try to fetch from same directory first
+    // Try GitHub Pages first, fallback to local
     let data;
     try {
-      const response = await fetch('data.json');
+      const response = await fetch('https://mpowerbuddy.github.io/openclaw-dashboard/data.json');
       if (!response.ok) throw new Error('Fetch failed');
       data = await response.json();
     } catch (fetchErr) {
-      // Fallback: try absolute URL
-      const fallbackUrl = 'https://mpowerbuddy.github.io/openclaw-dashboard/data.json';
-      console.log('Trying fallback URL:', fallbackUrl);
-      const response = await fetch(fallbackUrl);
-      if (!response.ok) throw new Error('Fallback failed');
+      const response = await fetch('data.json');
       data = await response.json();
     }
 
     // Set date
-    document.getElementById('date').textContent = data.date || 'Today';
+    document.getElementById('date').textContent = data.date || new Date().toLocaleDateString();
 
     // Weather
     const weatherEl = document.getElementById('weather');
     if (data.weather) {
       weatherEl.textContent = `${data.weather.icon || ''} ${data.weather.temp || ''}`;
     } else {
-      weatherEl.textContent = 'Loading...';
+      weatherEl.textContent = '--°F';
     }
 
     // Walk suggestion
@@ -36,30 +32,52 @@ async function loadDashboard() {
     } else if (data.walk) {
       walkSection.innerHTML = 'Not recommended today';
     } else {
-      walkSection.innerHTML = 'Walk data not available';
+      walkSection.innerHTML = 'Walk data unavailable';
     }
 
-    // Calendar (may not have data)
-    const calendarDiv = document.getElementById('calendar-events');
-    if (data.calendar && data.calendar.length > 0) {
-      calendarDiv.innerHTML = data.calendar.map(e =>
-        `<div class="event-item">${e.time || ''} — ${e.title || ''} <span class="cal-badge">${e.calendar || ''}</span></div>`
-      ).join('');
+    // Status Update (new section)
+    const statusSection = document.getElementById('status-update');
+    if (data.status && data.status.currentFocus) {
+      statusSection.innerHTML = `
+        <div class="status-section">
+          <h3>📋 Status Update</h3>
+          <p><strong>Current:</strong> ${data.status.currentFocus}</p>
+          <p><strong>Progress:</strong> ${data.status.progress || 'None'}</p>
+          <p><strong>Blockers:</strong> ${data.status.blockers || 'None'}</p>
+          <p><strong>Next:</strong> ${data.status.nextActions || 'None'}</p>
+          <small>${data.status.timestamp || ''}</small>
+        </div>
+      `;
     } else {
-      calendarDiv.innerHTML = '<div class="empty-state">No events loaded</div>';
+      statusSection.innerHTML = '<small>No status update today</small>';
     }
 
-    // Brain dump
+    // Brain Dumps by Category
     const brainDumpDiv = document.getElementById('brain-dump-items');
     if (data.brainDump && data.brainDump.length > 0) {
-      brainDumpDiv.innerHTML = data.brainDump.map(item => `
-        <div class="brain-dump-item priority-${item.priority || 'normal'}">
-          ${item.text || ''}
-          ${item.deadline ? `<div class="deadline">${item.deadline}</div>` : ''}
-        </div>
-      `).join('');
+      // Group by priority
+      const urgent = data.brainDump.filter(i => i.priority === 'urgent');
+      const high = data.brainDump.filter(i => i.priority === 'high' || i.priority === 'soon');
+      const normal = data.brainDump.filter(i => i.priority === 'normal');
+      const low = data.brainDump.filter(i => i.priority === 'low' || i.priority === 'someday');
+
+      brainDumpDiv.innerHTML = `
+        ${urgent.length ? `<div class="priority-group"><h4>🔴 Urgent</h4>${urgent.map(i => renderItem(i)).join('')}</div>` : ''}
+        ${high.length ? `<div class="priority-group"><h4>🟡 Soon</h4>${high.map(i => renderItem(i)).join('')}</div>` : ''}
+        ${normal.length ? `<div class="priority-group"><h4>⚪ Normal</h4>${normal.slice(0, 5).map(i => renderItem(i)).join('')}${normal.length > 5 ? `<p><small>+${normal.length - 5} more</small></p>` : ''}</div>` : ''}
+        ${low.length ? `<div class="priority-group"><h4>🩵 Someday</h4>${low.map(i => renderItem(i)).join('')}</div>` : ''}
+      `;
     } else {
       brainDumpDiv.innerHTML = '<div class="empty-state">All clear!</div>';
+    }
+
+    function renderItem(item) {
+      return `
+        <div class="brain-dump-item priority-${item.priority || 'normal'}">
+          ${item.text || ''}
+          ${item.deadline ? `<div class="deadline">📅 ${item.deadline}</div>` : ''}
+        </div>
+      `;
     }
 
     // Personal projects
@@ -72,13 +90,10 @@ async function loadDashboard() {
       projectsDiv.innerHTML = '<div class="empty-state">No active projects</div>';
     }
 
-    console.log('Dashboard loaded successfully');
   } catch (err) {
-    console.error('Failed to load dashboard:', err);
+    console.error('Dashboard load error:', err);
     document.getElementById('walk-info').innerHTML = '<div class="empty-state">Data unavailable</div>';
-    document.getElementById('calendar-events').innerHTML = '<div class="empty-state">Data unavailable</div>';
     document.getElementById('brain-dump-items').innerHTML = '<div class="empty-state">Data unavailable</div>';
-    document.getElementById('projects').innerHTML = '<div class="empty-state">Data unavailable</div>';
   }
 }
 
